@@ -1,0 +1,57 @@
+section {
+  box-sizing: border-box;
+  font-size: 1rem;
+  --user-font-scale: 1rem - 16px;
+  font-size: clamp(
+    1.15rem,
+    0.4626rem + 1.0309vw + var(--user-font-scale),
+    1.5rem
+  );
+  margin: 0;
+  padding: 2rem;
+  width: 100%;
+
+  /* background: hsl(131, 30%, 36%); */
+  color: #111827;
+}
+
+section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.basic-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.box {
+  border: solid 2px #000;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.box p {
+  margin: 0;
+}
+
+.perspective {
+  transform: perspective(350px) rotateX(25deg);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111827;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  section h1 {
+    font-size: 1.5rem;
+  }
+}
